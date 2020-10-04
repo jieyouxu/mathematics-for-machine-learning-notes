@@ -1,0 +1,110 @@
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{booktabs}
+
+% Quotes
+\usepackage[utf8]{inputenc}
+\usepackage[autostyle, style=english]{csquotes}
+
+% Links
+\usepackage[hidelinks, breaklinks]{hyperref}
+
+% Captions
+\usepackage[margin=1.5cm]{caption}
+
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+\newcommand{\given}{\mid}
+
+\DeclarePairedDelimiterX\VSBars[1]\lvert\rvert{#1}
+\DeclarePairedDelimiterX\VDBars[1]{\lvert\lvert}{\rvert\rvert}{#1}
+
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Rational}{\mathbb{Q}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Int}{\mathbb{Z}}
+\newcommand{\PosInt}{\mathbb{Z}^{+}}
+\newcommand{\NegInt}{\mathbb{Z}^{-}}
+\newcommand{\NatNum}{\mathbb{N}}
+\newcommand{\PosReal}{\mathbb{R}^{+}}
+\newcommand{\NegReal}{\mathbb{R}^{-}}
+
+\newcommand{\AlephZero}{\aleph_{0}}
+
+\DeclareMathOperator{\Exists}{\exists}
+\DeclareMathOperato{\Forall}{\forall}
+
+\DeclareMathOperator{\Diff}{\backslash}
+
+\DeclarePairedDelimiter{\Ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\Floor}{\lfloor}{\rfloor}
+
+\newcommand{\AbsComplement}[1]{{#1}^{c}}
+
+\newcommand{\True}{\mathrm{T}}
+\newcommand{\False}{\mathrm{F}}
+
+\newcommand{\Domain}[1]{\operatorname{domain}({#1})}
+\newcommand{\Image}[1]{\operatorname{image}({#1})}
+
+\newcommand{\Inverse}[1]{{#1}^{-1}}
+
+\newcommand{\Permutate}[1]{\sigma({#1})}
+
+\DeclareMathOperator{\Sign}{sgn}
+
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+\newcommand{\Encrypt}[3]{\mathrm{encrypt}_{#1, #2}(#3)}
+\newcommand{\Decrypt}[3]{\mathrm{decrypt}_{#1, #2}(#3)}
+
+\newcommand{\MatrixClass}[2]{\mathcal{M}(#1, #2)}
+
+\newcommand{\rddots}{\reflectbox{$\ddots$}}
+
+\newenvironment{detmatrix}[1]{%
+  \left\vert\begin{array}{@{}*{#1}{c}@{}}
+}{%
+  \end{array}\right\vert
+}
+
+\newenvironment{augmatrix}[1]{%
+  \left[\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right]
+}
+
+\newcommand{\Prob}[1]{\mathrm{P} \left( #1 \right)}
+\newcommand{\ExpVal}[1]{\mathrm{E} \left( #1 \right)}
+\newcommand{\ExpValS}[1]{\mathrm{E} \left[ #1 \right]}
+\newcommand{\Var}[1]{\mathrm{Var} \left( #1 \right)}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{example}{Example}
+
+\theoremstyle{definition}
+\newtheorem{proposition}{Proposition}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newcommand{\ApproxDistributed}{\mathrel{\dot\sim}}
+
+\newcommand{\Bernoulli}[1]{\mathrm{Bernoulli}(#1)}
+\newcommand{\Binomial}[2]{\mathrm{Binomial}(#1, #2)}
+\newcommand{\Geometric}[1]{\mathrm{Geometric}(#1)}
+\newcommand{\Poisson}[1]{\mathrm{Poisson}(#1)}
+\newcommand{\Uniform}[2]{\mathrm{U}(#1, #2)}
